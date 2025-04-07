@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Dropdown Menu Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            color: red;
+
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 8px 12px;
+            color: #f4f2f2;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #393737;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #f3e9e9;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #484343;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+          <div class="nav-left">  
+            <img src="images/logo.jpg" class="logo">
+            <h1 class="site-name">Akshat Bhosale</h1>
+          </div>
+          <ul>
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li class="dropdown">
+                  <a href="#projects">Projects</a>
+                  <div class="dropdown-content">
+                      <a href="#project1">Hospital Management</a>
+                      <a href="#project2">Chat Application</a>
+                      <a href="#project3">Task Tracker</a>
+                  </div>
+              </li>
+              <li><a href="#blogs">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hey!! I AM<span> AKSHAT</span></h1>
+        </div>
+        <div class="header-t">
+            <div class="profile-image">
+              <img src="images/gif.gif" alt="Profile Image">
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                    <img src="">
+                </div>
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1> 
+                    <p>I’m a passionate developer exploring Flutter and React Native to build innovative, user-centric applications. I thrive 
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Menu</button>
+                    <div class="dropdown-content">
+                      <p class="tab-links" onclick="openTab(0)">Skills</p>
+                      <p class="tab-links" onclick="openTab(1)">Experience</p>
+                      <p class="tab-links" onclick="openTab(2)">Education</p>
+                    </div>
+                </div>
+                  
+                  <!-- Tab Contents -->
+                  <div class="tab-wrapper">
+                    <div class="tab-contents active-tab">
+                      <ul>
+                        <li><span>Python</span><br>Data analysis</li>
+                        <li><span>DBMS</span><br>Integration of applications</li>
+                      </ul>
+                    </div>
+                  
+                    <div class="tab-contents">
+                      <ul>
+                        <li><span>Cyber Security and Ethical Hacking</span><br>1 month experience</li>
+                      </ul>
+                    </div>
+                  
+                    <div class="tab-contents">
+                      <ul>
+                        <li><span>BTech Degree</span><br>Information Technology</li>
+                        <li><span>Certifications</span><br>Cyber Security, AI & ML</li>
+                      </ul>
+                    </div>
+                                  
+                </div>
+        </div>
+    </div>  
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+          <div class="project-card">
+            <h2>Hospital Management System</h2>
+            <p>A system to manage hospital operations.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div class="project-card">
+            <h2>Online Chat Application</h2>
+            <p>A secure chat platform built with Python.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div class="project-card">
+            <h2>Task Tracking App</h2>
+            <p>Gamified task completion inspired by Solo Leveling.</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div id="blogs">
+      <div class="container">
+        <h1 class="sub-title">Blogs</h1>
+        <div class="blogs-list">
+          <div class="blog-card">
+            <h2>The Rise of Flutter in App Development</h2>
+            <p>Explore how Flutter has revolutionized app development by providing a single codebase for cross-platform applications.</p>
+          </div>
+          <div class="blog-card">
+            <h2>Securing Data with Ethical Hacking</h2>
+            <p>Learn about the importance of ethical hacking in safeguarding digital systems and preventing data breaches.</p>
+          </div>
+          <div class="blog-card">
+            <h2>Gamification in Productivity Apps</h2>
+            <p>Discover how gamification techniques are used to boost engagement and user productivity in mobile applications.</p>
+          </div>
+          <div class="blog-card">
+            <h2>The Power of Python for AI and ML</h2>
+            <p>An insight into how Python has become the language of choice for artificial intelligence and machine learning development.</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div id="contact">
+      <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Email: <a href="mailto:bhosaleakshat@gmail.com">bhosaleakshat@gmail.com</a></p>
+            <p>Phone: +91 8624972612</p>
+            <p>Location: India</p>
+          </div>
+        </div>
+      </div>
+    </div>         
+   <script src="script1.js"></script>
+</body>
+</html>
